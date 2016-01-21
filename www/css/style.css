@@ -1,0 +1,14 @@
+/* Empty. Add your own CSS if you like */
+.mfb-component__button--main, .mfb-component__button--child {
+  background-color: #29C257;
+  display: inline-block;
+  position: relative;
+  border: none;
+  border-radius: 50%;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.14), 0 4px 8px rgba(0, 0, 0, 0.28);
+  cursor: pointer;
+  outline: none;
+  padding: 0;
+  position: relative;
+  -webkit-user-drag: none;
+  color: #f1f1f1; }
