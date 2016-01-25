@@ -5,7 +5,7 @@
 // the 2nd parameter is an array of 'requires'
 // 'starter.services' is found in services.js
 // 'starter.controllers' is found in controllers.js
-angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', 'jett.ionic.filter.bar', 'ng-mfb'])
+angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', 'jett.ionic.filter.bar', 'ng-mfb', 'ion-tree-list'])
 
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
@@ -63,15 +63,6 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', '
         'tab-favorites': {
           templateUrl: 'templates/tab-favorites.html',
           controller: 'FavoritesCtrl'
-        }
-      }
-    })
-    .state('tab.chat-detail', {
-      url: '/chats/:chatId',
-      views: {
-        'tab-chats': {
-          templateUrl: 'templates/chat-detail.html',
-          controller: 'ChatDetailCtrl'
         }
       }
     })

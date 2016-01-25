@@ -1,5 +1,6 @@
-<ion-view view-title="Text">
-  <ion-content>
-    {{view.text}}
-  </ion-content>
-</ion-view>
+<ion-slide-box on-slide-changed="slideHasChanged($index)">
+  <ion-slide ng-repeat="item in view.text">
+    <div class="box blue"><h1>{{item}}</h1></div>
+  </ion-slide>
+</ion-slide-box>
+

@@ -1,13 +1,12 @@
 angular.module('starter.controllers', [])
 
 .controller('BrowseCtrl', function($scope, $state, $timeout, $ionicFilterBar, $ionicPopup, Data, Text) {
-  $scope.view = {};
   $scope.data = Data.all();
-    $scope.remove = function(item) {
-      Data.remove(item);
-    };
+  $scope.remove = function(item) {
+    Data.remove(item);
+  };
     
-    $scope.tapCategory = function() {
+  $scope.tapCategory = function() {
     
   };
   
@@ -86,24 +85,18 @@ angular.module('starter.controllers', [])
     return vm;
 })
 
-.controller('FavoritesCtrl', function($scope, Chats) {
-  // With the new view caching in Ionic, Controllers are only called
-  // when they are recreated or on app start, instead of every page change.
-  // To listen for when this page is active (for example, to refresh data),
-  // listen for the $ionicView.enter event:
-  //
-  //$scope.$on('$ionicView.enter', function(e) {
-  //});
+.controller('FavoritesCtrl', function($scope) {
 
-  $scope.chats = Chats.all();
-  $scope.remove = function(chat) {
-    Chats.remove(chat);
-  };
+})
+
+.controller('SettingsCtrl', function($scope) {
+
 })
 
 .controller('TextCtrl', function($scope, $stateParams, Text) {
   $scope.view = {};
-  $scope.view.text = Text.getText();
+  //$scope.view.text = Text.getText();
+  $scope.view.text = [Text.getText(), 'Tab: Ryan Kramlich'];
 })
 
 .controller('HistoryCtrl', function($scope) {

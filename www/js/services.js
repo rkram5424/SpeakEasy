@@ -5,27 +5,17 @@ angular.module('starter.services', [])
 
   // Some fake testing data
   var data = [
-	{
-	  type: "category",
-	  name: "Category_1",
-	  text: "Category 1"
-	},{
-	  type: "category",
-	  name: "Category_2",
-	  text: "Category 2"
-	},{
-	  type: "category",
-	  name: "Category_3",
-	  text: "Category 3"
-	},{
-	  type: "category",
-	  name: "Category_4",
-	  text: "Category 4"
-	},{
-	  type: "item",
-	  name: "Item_1",
-	  text: "Item 1 text"
-	}
+    {
+      name: 'first task 1',
+      tree: [
+        {
+          name: 'first task 1.1'
+        }
+      ]
+    },
+    {
+      name: 'first task 2'
+    }
   ];
 
   return {
@@ -47,6 +37,10 @@ angular.module('starter.services', [])
     
     }
   };
+})
+
+.factory('Storage', function(){
+
 })
 
 .factory('Text', function(){
