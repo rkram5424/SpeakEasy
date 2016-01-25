@@ -7,7 +7,7 @@ Create tabs with an icon and label, using the tabs-positive style.
 Each tab's child <ion-nav-view> directive will have its own
 navigation history that also transitions its views in and out.
 -->
-<ion-tabs class="tabs-positive tabs-striped tabs-icon-left tabs-color-active-positive">
+<ion-tabs class="tabs-positive tabs-striped tabs-icon tabs-color-active-positive">
   <!-- Browse Tab -->
   <ion-tab title="Browse" icon-off="ion-ios-list-outline" icon-on="ion-ios-list" href="#/tab/browse">
     <ion-nav-view name="tab-browse"></ion-nav-view>
@@ -24,7 +24,7 @@ navigation history that also transitions its views in and out.
 <nav mfb-menu position="br" effect="zoomin" 
      active-icon="ion-close-round" resting-icon="ion-plus-round"
      toggling-method="click">
-  <button mfb-button icon="ion-edit" label="Quick Text"></button>
+  <button mfb-button icon="ion-edit" label="Quick Text" ng-click="quickText()"></button>
   <button mfb-button icon="ion-folder" label="Add Category"></button>
-  <button mfb-button icon="ion-cube" label="Add Item" ng-href="/app/text"></button>
+  <button mfb-button icon="ion-cube" label="Add Item"></button>
 </nav>

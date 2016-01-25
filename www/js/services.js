@@ -1,50 +1,62 @@
 angular.module('starter.services', [])
 
-.factory('Chats', function() {
+.factory('Data', function() {
   // Might use a resource here that returns a JSON array
 
   // Some fake testing data
-  var chats = [{
-    id: 0,
-    name: 'Ben Sparrow',
-    lastText: 'You on your way?',
-    face: 'img/ben.png'
-  }, {
-    id: 1,
-    name: 'Max Lynx',
-    lastText: 'Hey, it\'s me',
-    face: 'img/max.png'
-  }, {
-    id: 2,
-    name: 'Adam Bradleyson',
-    lastText: 'I should buy a boat',
-    face: 'img/adam.jpg'
-  }, {
-    id: 3,
-    name: 'Perry Governor',
-    lastText: 'Look at my mukluks!',
-    face: 'img/perry.png'
-  }, {
-    id: 4,
-    name: 'Mike Harrington',
-    lastText: 'This is wicked good ice cream.',
-    face: 'img/mike.png'
-  }];
+  var data = [
+	{
+	  type: "category",
+	  name: "Category_1",
+	  text: "Category 1"
+	},{
+	  type: "category",
+	  name: "Category_2",
+	  text: "Category 2"
+	},{
+	  type: "category",
+	  name: "Category_3",
+	  text: "Category 3"
+	},{
+	  type: "category",
+	  name: "Category_4",
+	  text: "Category 4"
+	},{
+	  type: "item",
+	  name: "Item_1",
+	  text: "Item 1 text"
+	}
+  ];
 
   return {
     all: function() {
-      return chats;
+      return data;
     },
-    remove: function(chat) {
-      chats.splice(chats.indexOf(chat), 1);
+    remove: function(item) {
+      data.splice(data.indexOf(item), 1);
     },
-    get: function(chatId) {
-      for (var i = 0; i < chats.length; i++) {
-        if (chats[i].id === parseInt(chatId)) {
-          return chats[i];
+    get: function(itemId) {
+      for (var i = 0; i < data.length; i++) {
+        if (data[i].id === parseInt(itemId)) {
+          return data[i];
         }
       }
       return null;
+    },
+    set: function (position, type, text) {
+    
+    }
+  };
+})
+
+.factory('Text', function(){
+  var text = "";
+  return {
+    getText: function(){
+	  return text;
+    },
+    setText: function(input){
+	  text = input;
     }
   };
 });
